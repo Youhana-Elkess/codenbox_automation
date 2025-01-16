@@ -82,15 +82,14 @@ The framework currently tests:
 - Chrome Browser
 - IDE (recommended: VS Code, Eclipse, or IntelliJ)
 
-### Installation Steps
-1. Clone the repository:
-   git clone [repository-url]
+## Logging
+The framework includes logging capabilities using Log4j. This allows for tracking the execution flow of tests and capturing important information during test runs.
 
-2. Install dependencies:
-   mvn clean install
+### Log4j Configuration
+A Log4j configuration file (`log4j2.xml`) is located in the `src/test/resources` directory. This file defines the logging behavior, including the output format and log levels.
 
-3. Run tests:
-   mvn test
+### Example of Logging in Tests
+In the `Registeration` class, logging statements have been added to track the progress of the test execution:
 
 ## Dependencies
 - Selenium WebDriver: 4.21.0
@@ -112,18 +111,6 @@ The framework currently tests:
 - Failure screenshots stored in Screenshots directory
 - Console logs for test execution tracking
 
-## Known Issues and Solutions
-1. WebDriver Initialization
-   - Issue: Driver not found
-   - Solution: Ensure WebDriverManager is properly configured in testBase.java
-
-2. Element Location
-   - Issue: Elements not found during test execution
-   - Solution: Verify element locators and implement appropriate wait conditions
-
-3. Test Failures
-   - Issue: Unexpected test failures
-   - Solution: Check Screenshots directory for failure evidence and logs
 
 ## Future Enhancements
 - [ ] Add support for multiple browsers
